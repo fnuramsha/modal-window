@@ -1,5 +1,5 @@
 
-'use strict';
+'use strict'
 const modal = document.querySelector('.modal')
 const overlay = document.querySelector('.overlay')
 const showModal = document.querySelectorAll('.show-modal')
@@ -23,3 +23,14 @@ for(let i=0; i < showModal.length; i++) {
 
 closeModal.addEventListener('click', hideModal)
 overlay.addEventListener('click', hideModal )
+
+
+
+document.addEventListener('keydown', function(e) {
+    console.log(e)
+    if(e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        hideModal()
+    }
+
+
+})
